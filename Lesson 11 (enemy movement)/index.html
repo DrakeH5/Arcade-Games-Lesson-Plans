@@ -1,0 +1,31 @@
+<html>
+  <body>
+
+    <canvas id="canvas"></canvas>
+
+    <style>
+      canvas {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+      }
+    </style>
+    <script src="pong.js"></script>
+    <script src="spaceInvaders.js"></script>
+    <script src="playerMovement.js"></script>
+    <script>
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext('2d');
+
+      playerY = 10;
+      enemyY = 10;
+      ballX=canvas.width/2;
+      ballY=canvas.height/2;
+      ballVelocity = [
+        Math.floor(Math.random() * -5) + -2, //x velocity (random number 1-5)
+        Math.floor(Math.random() * -5) + -2  //y velocity (random number 1-5)
+      ]
+      var currentGame = 'spaceInvaders';
+    </script>
+  </body>
+</html>
